@@ -3,10 +3,10 @@
 int max(int array[],int n)
 {
   int max =array[0];
-  for(int j=0;j<n;j++)
+  for(int i=0;i<n;i++)
   {
-    if(array[j]>max)
-      max =array[j];
+    if(array[i]>max)
+      max =array[i];
   }
   return max;
 }
@@ -23,9 +23,9 @@ int min(int array[],int n)
 float average(int array[],int n)
 {
   int sum =0;
-  for(int j=0;j<n;j++)
+  for(int k=0;k<n;k++)
   {
-    sum+=array[j];
+    sum+=array[k];
   }
    sum =sum/n; 
    return sum;
@@ -33,34 +33,34 @@ float average(int array[],int n)
 int mode(int array[],int n)
 {
   int maxcount=0,maxvalue=0;
-  for(int j=0;j<n;j++)
+  for(int p=0;p<n;p++)
   {
     int count =0;
-    for(int k=0;k<n;k++)
+    for(int r=0;r<n;r++)
     {
-      if(array[j]==array[k])
+      if(array[p]==array[r])
         ++count;
     }
     if(count>maxcount)
      {
       maxcount=count;
-      maxvalue=array[j];
+      maxvalue=array[p];
      }
     return maxvalue;
   }
  }
 int factors(int n;int array[])
 {
-  int k=0;
-  for(int j=2;j<=n;j++)
+  int y=0;
+  for(int x=2;x<=n;x++)
   {
-    if(n%j==0)
+    if(n%x==0)
     {
-      array[k]=j;
-      n=n/j;
-      k++;
-      j=1;
+      array[y]=x;
+      n=n/x;
+      y++;
+      x=1;
     }
   }
-  return k;
+  return y;
 }
